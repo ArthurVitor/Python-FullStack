@@ -27,10 +27,11 @@
 #     for dd_k, dd_v in cv.items():
 #         print(f'\t {dd_k}, {dd_v}')
 
-d1 = {1:'a', 2:'b', 3:'c'}
-v = d1.copy()
+# d1 = {1:'a', 2:'b', 3:'c'}
+# v = d1.copy()
+#
+# v[1] = 'Arthur'
+#
+# print(d1)
+# print(v)
 
-v[1] = 'Arthur'
-
-print(d1)
-print(v)
