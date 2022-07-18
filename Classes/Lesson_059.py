@@ -11,18 +11,26 @@
 # for k, v in d1.items():
 #     print(k, ':', v)
 
-clientes = {
-    'cliente1': {
-        'nome': 'Arthur',
-        'sobrenome': 'Vitor'
-    },
-    'cliente2': {
-        'nome': 'Pedro',
-        'sobrenome': 'Moreira'
-    },
-}
+# clientes = {
+#     'cliente1': {
+#         'nome': 'Arthur',
+#         'sobrenome': 'Vitor'
+#     },
+#     'cliente2': {
+#         'nome': 'Pedro',
+#         'sobrenome': 'Moreira'
+#     },
+# }
+#
+# for ck, cv in clientes.items():
+#     print(f'Cliente: {ck}')
+#     for dd_k, dd_v in cv.items():
+#         print(f'\t {dd_k}, {dd_v}')
 
-for ck, cv in clientes.items():
-    print(f'Cliente: {ck}')
-    for dd_k, dd_v in cv.items():
-        print(f'\t {dd_k}, {dd_v}')
+d1 = {1:'a', 2:'b', 3:'c'}
+v = d1.copy()
+
+v[1] = 'Arthur'
+
+print(d1)
+print(v)
