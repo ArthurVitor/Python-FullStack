@@ -1,6 +1,5 @@
 from Dados import produtos, pessoas, lista
+from functools import reduce
 
-
-nova_lista = filter(lambda p: p['preco'] > 10, produtos)
-for c in nova_lista:
-    print(c)
+soma_lista = reduce(lambda ac, i,: i + ac, lista, 0)
+print(soma_lista)
