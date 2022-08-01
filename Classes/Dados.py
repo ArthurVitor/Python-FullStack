@@ -1,4 +1,4 @@
-produto = [
+produtos = [
     {'nome': 'p1', 'preco': 13},
     {'nome': 'p2', 'preco': 42},
     {'nome': 'p3', 'preco': 14},
