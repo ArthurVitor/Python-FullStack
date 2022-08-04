@@ -11,7 +11,7 @@ d1 = {
     }
 }
 
-d1_json = json.dumps(d1, indent=True)
-
-with open('abc.json', 'w+') as file:
-    file.write(d1_json)
+for k, v in d1.items():
+    print(k.upper())
+    for k1, v1 in v.items():
+        print(f' \t {k1.capitalize()}, {v1}')
