@@ -1,18 +1,17 @@
-file = open('abc.txt', 'w+')
-file.write('Linha 1 \n')
-file.write('Linha 2 \n')
-file.write('Linha 3 \n')
-file.seek(0, 0)
-print(file.read())
-print('###')
+import json
 
-file.seek(0, 0)
-print(file.readline(), end='')
-print(file.readline(), end='')
-print(file.readline(), end='')
+d1 = {
+    'P1': {
+        'nome': 'Arthur',
+        'idade': 15
+    },
+    'P2': {
+        'nome': 'Cleber',
+        'idade': 16
+    }
+}
 
-print('###')
-file.seek(0, 0)
-for linha in file.readlines():
-    print(linha, end='')
-file.close()
+d1_json = json.dumps(d1, indent=True)
+
+with open('abc.json', 'w+') as file:
+    file.write(d1_json)
