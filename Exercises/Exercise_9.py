@@ -2,6 +2,15 @@ def addChore(todo, chore):  # Receives chore's list and chore
     todo.append(chore)
 
 
+def undo(todo, last):
+    last.append(todo.pop())
+
+
+def redo(todo, last):
+    todo.append(last[-1])
+    last.pop()
+
+
 if __name__ == '__main__':
     todo = []
     last = []
