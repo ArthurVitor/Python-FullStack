@@ -1,17 +1,20 @@
 class Pessoa:
-    def __init__(self):
-        self.atributo = 'Teste'
+    def __init__(self, nome):
+        self.nome = nome
 
     @property
     def nome(self):
-        return 'Arthur'
+        return self._nome
 
     @nome.setter
     def nome(self, valor):
-        self.atributo = valor
+        self._nome = valor
+
+    @property
+    def sobrenome(self):
+        return 'Vitor'
 
 
-p1 = Pessoa()
-p1.nome = 'João'
-print(p1.atributo)
+p1 = Pessoa('Arthur')
 print(p1.nome)
+print(p1.sobrenome)
