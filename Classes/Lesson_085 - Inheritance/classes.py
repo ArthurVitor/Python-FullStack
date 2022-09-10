@@ -8,7 +8,7 @@ class Pessoa: # Super classe
     def nome(self):
         return self._nome
 
-    @nome.setter  # O setter somente afeta o nome na classe "Cliente", outros classes permaneceram intocadas
+    @nome.setter  # O setter afeta o nome em todas as classes
     def nome(self, valor):
         if isinstance(valor, str):
             valor = valor.title()
