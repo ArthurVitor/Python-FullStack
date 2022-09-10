@@ -1,23 +1,25 @@
-class Pessoa:
+class Pessoa: # Super classe
     def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
+        self.nome_classe = self.__class__.__name__
 
-    @property
+    @property  # Getter
     def nome(self):
         return self._nome
 
     @nome.setter  # O setter somente afeta o nome na classe "Cliente", outros classes permaneceram intocadas
     def nome(self, valor):
         if isinstance(valor, str):
-            valor = valor.replace('Ar', 'BA')
+            valor = valor.title()
         self._nome = valor
 
 
+class Cliente(Pessoa):  # Sub-classe. 0Herdou os atributos 'NOME' e 'IDADE' da super classe (Pessoa), além de seus metodos.
+    def comprar(self):
+        print(f'{self.nome_classe} está comprando')
 
-class Cliente(Pessoa):  # Herdou os atributos 'NOME' e 'IDADE' da classe pai (Pessoa).
-    pass
 
-class Aluno(Pessoa):
-    def prainta(self):
-        print(self.nome)
+class Aluno(Pessoa): # Sub-classe. Herdou os atributos 'NOME' e 'IDADE' da da super-classe (Pessoa), além de seus metodos.
+    def estudar(self):
+        print(f'{self.nome_classe} está estudando')

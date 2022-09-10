@@ -1,9 +1,9 @@
 from classes import *
 
-p1 = Cliente('Arthur', 16)
+c1 = Cliente('Arthur', 16)
 a1 = Aluno('Arma', 51)
 print('Classe pessoa')
-print(p1.nome, p1.idade)
+c1.comprar()
 print()
 print('Classe aluno')
-print(a1.nome, a1.idade)
+a1.estudar()
