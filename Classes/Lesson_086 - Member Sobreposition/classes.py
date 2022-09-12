@@ -5,14 +5,22 @@ class Pessoa:  # Super classe
         self.nome_classe = self.__class__.__name__
 
     def falar(self):
-        print(f'{self.nome_classe} está falando')
+        print(f'{self.nome_classe} falando | Falar de pessoa')
 
+    def teste(self):
+        print('Teste | Classe Pessoa')
 
-class Cliente(Pessoa):  # Sub-classe. 0Herdou os atributos 'NOME' e 'IDADE' da super classe (Pessoa), além de seus metodos.
+class Cliente(Pessoa):
     def comprar(self):
         print(f'{self.nome_classe} está comprando')
 
 
-class Aluno(Pessoa):  # Sub-classe. Herdou os atributos 'NOME' e 'IDADE' da da super-classe (Pessoa), além de seus metodos.
+class Aluno(Pessoa):
     def estudar(self):
         print(f'{self.nome_classe} está estudando')
+
+
+class ClienteVip(Cliente):
+    def falar(self):
+        print('Classe Cliente vip | Falar de Cliente Vip')
+        super().falar()
