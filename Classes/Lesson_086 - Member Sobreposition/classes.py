@@ -10,6 +10,7 @@ class Pessoa:  # Super classe
     def teste(self):
         print('Teste | Classe Pessoa')
 
+
 class Cliente(Pessoa):
     def comprar(self):
         print(f'{self.nome_classe} está comprando')
@@ -21,6 +22,11 @@ class Aluno(Pessoa):
 
 
 class ClienteVip(Cliente):
+    def __init__(self, nome, idade, sobrenome):
+        Pessoa.__init__(self, nome, idade)
+        self.sobrenome = sobrenome
+
     def falar(self):
-        print('Classe Cliente vip | Falar de Cliente Vip')
-        super().falar()
+        Pessoa.falar(self)
+        Cliente.falar(self)
+        print(f'{self.nome}, {self.sobrenome}')
