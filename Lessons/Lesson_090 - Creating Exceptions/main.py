@@ -2,9 +2,9 @@ class TaErradoError(Exception):
     ...
 
 
-
 def test():
     raise TaErradoError('Errado')
+
 
 try:
     test()
