@@ -1,7 +1,9 @@
 from datetime import datetime
 from locale import setlocale, LC_ALL
+from calendar import monthrange
 
 setlocale(LC_ALL, '')
+
 
 def converter_em_dicionario(data) -> dict:
     formatacao = list(data.strftime('%d %m %Y'))
@@ -9,6 +11,12 @@ def converter_em_dicionario(data) -> dict:
     dctt = dict(zip(('dia', 'mes', 'ano'), formatacao))
     return dctt
 
+
 dt = datetime.now()
-dctt = converter_em_dicionario(dt)
-print(dctt['mes'])
+mes_atual = int(datetime.strftime('%m'))
+formatacao1 = dt.strftime('%A, %d, de %B de %Y')
+formatacao2 = dt.strftime('%d/%m/%Y')
+
+print(monthrange(2022, mes_atual))
+print(formatacao1)
+print(formatacao2)
